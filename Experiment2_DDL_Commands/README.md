@@ -105,15 +105,18 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+-- Write an SQL query to add a new column email of type TEXT to the Student_details table, and ensure that this column cannot contain NULL values and make default value as 'Invalid'
 
 ```sql
--- Paste your SQL code below for Question 1
-```
+-- 
+```![Screenshot (562)](https://github.com/user-attachments/assets/258be357-5ac2-4efd-a733-72cd2f25a77d)
+
 
 **Output:**
 
 ![Output1](output.png)
+![Screenshot (563)](https://github.com/user-attachments/assets/fdbffd04-90a2-4961-a6b3-2dd8fd9bd0cc)
+
 
 **Question 2**
 ---

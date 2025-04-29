@@ -1,256 +1,216 @@
-# Experiment 2: DDL Commands
+# Experiment 3: DML Commands
 
 ## AIM
-To study and implement DDL commands and different types of constraints.
+To study and implement DML (Data Manipulation Language) commands.
 
 ## THEORY
 
-### 1. CREATE
-Used to create a new relation (table).
-
+### 1. INSERT INTO
+Used to add records into a relation.
+These are three type of INSERT INTO queries which are as
+A)Inserting a single record
+**Syntax (Single Row):**
+```sql
+INSERT INTO table_name (field_1, field_2, ...) VALUES (value_1, value_2, ...);
+```
+**Syntax (Multiple Rows):**
+```sql
+INSERT INTO table_name (field_1, field_2, ...) VALUES
+(value_1, value_2, ...),
+(value_3, value_4, ...);
+```
+**Syntax (Insert from another table):**
+```sql
+INSERT INTO table_name SELECT * FROM other_table WHERE condition;
+```
+### 2. UPDATE
+Used to modify records in a relation.
+Syntax:
+```sql
+UPDATE table_name SET column1 = value1, column2 = value2 WHERE condition;
+```
+### 3. DELETE
+Used to delete records from a relation.
+**Syntax (All rows):**
+```sql
+DELETE FROM table_name;
+```
+**Syntax (Specific condition):**
+```sql
+DELETE FROM table_name WHERE condition;
+```
+### 4. SELECT
+Used to retrieve records from a table.
 **Syntax:**
 ```sql
-CREATE TABLE (
-  field_1 data_type(size),
-  field_2 data_type(size),
-  ...
-);
+SELECT column1, column2 FROM table_name WHERE condition;
 ```
-### 2. ALTER
-Used to add, modify, drop, or rename fields in an existing relation.
-(a) ADD
-```sql
-ALTER TABLE std ADD (Address CHAR(10));
-```
-(b) MODIFY
-```sql
-ALTER TABLE relation_name MODIFY (field_1 new_data_type(size));
-```
-(c) DROP
-```sql
-ALTER TABLE relation_name DROP COLUMN field_name;
-```
-(d) RENAME
-```sql
-ALTER TABLE relation_name RENAME COLUMN old_field_name TO new_field_name;
-```
-### 3. DROP TABLE
-Used to permanently delete the structure and data of a table.
-```sql
-DROP TABLE relation_name;
-```
-### 4. RENAME
-Used to rename an existing database object.
-```sql
-RENAME TABLE old_relation_name TO new_relation_name;
-```
-### CONSTRAINTS
-Constraints are used to specify rules for the data in a table. If there is any violation between the constraint and the data action, the action is aborted by the constraint. It can be specified when the table is created (using CREATE TABLE) or after it is created (using ALTER TABLE).
-### 1. NOT NULL
-When a column is defined as NOT NULL, it becomes mandatory to enter a value in that column.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size) NOT NULL
-);
-```
-### 2. UNIQUE
-Ensures that values in a column are unique.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size) UNIQUE
-);
-```
-### 3. CHECK
-Specifies a condition that each row must satisfy.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size) CHECK (logical_expression)
-);
-```
-### 4. PRIMARY KEY
-Used to uniquely identify each record in a table.
-Properties:
-Must contain unique values.
-Cannot be null.
-Should contain minimal fields.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size) PRIMARY KEY
-);
-```
-### 5. FOREIGN KEY
-Used to reference the primary key of another table.
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  column_name data_type(size),
-  FOREIGN KEY (column_name) REFERENCES other_table(column)
-);
-```
-### 6. DEFAULT
-Used to insert a default value into a column if no value is specified.
-
-Syntax:
-```sql
-CREATE TABLE Table_Name (
-  col_name1 data_type,
-  col_name2 data_type,
-  col_name3 data_type DEFAULT 'default_value'
-);
-```
-
 **Question 1**
-Write an SQL query to add a new column email of type TEXT to the Student_details table, and ensure that this column cannot contain NULL values and make default value as 'Invalid'
 
-![Screenshot (562)](https://github.com/user-attachments/assets/2c9031e9-3a5d-4b50-9d4a-59a2bab75925)
+Write a SQL statement to Change the category to 'Household' where product name contains 'Detergent' in the products table.
 
+Products Table 
+
+![image](https://github.com/user-attachments/assets/749060d2-c50f-47bb-9f16-f1ac60ee8104)
 
 **Output:**
 
-![Screenshot (563)](https://github.com/user-attachments/assets/22ba52c2-cf4b-4c5e-a217-2f5d9baa71f0)
+![image](https://github.com/user-attachments/assets/f5515294-f1b6-4459-86ec-9a3ca0df3abe)
 
 
 
 **Question 2**
 
-Write a SQL query to add birth_date attribute as timestamp (datatype) in the table customer 
+Decrease the reorder level by 30 percent where the product name contains 'cream' and quantity in stock is higher than reorder level in the products table.
 
-Sample table: customer
-
-![Screenshot (564)](https://github.com/user-attachments/assets/526d34a5-0a3a-4f66-bbc3-38a7800a3372)
-
-
+PRODUCTS TABLE
+![image](https://github.com/user-attachments/assets/f33c03fa-76f4-44ec-8875-dbd76cf854ee)
 
 **Output:**
 
-![Screenshot (565)](https://github.com/user-attachments/assets/687006af-3c5e-4b00-ad2e-f14dfb1e946d)
-
+![image](https://github.com/user-attachments/assets/783364b6-abb8-4b03-8199-cdae43070f3b)
 
 
 **Question 3**
 
-Create a table named Invoices with the following constraints:
+Write a SQL statement to Increase the selling price by 10% for all products in the 'Bakery' category in the products table.
 
-InvoiceID as INTEGER should be the primary key.
-InvoiceDate as DATE.
-DueDate as DATE should be greater than the InvoiceDate.
-Amount as REAL should be greater than 0.
+Products table
+![image](https://github.com/user-attachments/assets/3fefd9c0-436a-453a-adf0-885761055a24)
 
-![Screenshot (566)](https://github.com/user-attachments/assets/6e0ca33d-3af2-4b03-9dad-cea58cfaea96)
 
 **Output:**
 
-![Screenshot (568)](https://github.com/user-attachments/assets/5dc31042-b668-4363-b5cb-985d1010d9f9)
+
+![image](https://github.com/user-attachments/assets/acafadb0-3d7f-43e2-95ad-a12d9c86b4f8)
+
 
 
 **Question 4**
 
-Insert all students from Archived_students table into the Student_details table.
-![Screenshot (567)](https://github.com/user-attachments/assets/0887579d-b476-46a7-9885-14e40f9203c8)
+Write a SQL statement to Double the salary for employees in department 20 who have a job_id ending with 'MAN'
+
+Employees table
+
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
+
+![image](https://github.com/user-attachments/assets/81b4d975-ebf7-4044-824d-07304eff61ec)
+
+
 
 
 **Output:**
 
-![Screenshot (569)](https://github.com/user-attachments/assets/e1ec8c75-70ae-4da1-90a6-9e152f662076)
+![image](https://github.com/user-attachments/assets/b03eec29-5248-4176-9a63-83369d464b55)
 
 
 
 **Question 5**
-Create a table named Customers with the following columns:
 
-CustomerID as INTEGER
-Name as TEXT
-Email as TEXT
-JoinDate as DATETIME
+Write a SQL statement to change the email column of employees table with 'Unavailable' for all employees in employees table.
 
-![Screenshot (570)](https://github.com/user-attachments/assets/2173739b-d0db-49eb-abd0-1ff7e7b6e450)
+Employees table
+
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
+
+![image](https://github.com/user-attachments/assets/612d83d4-74af-48dd-97a9-748b8f5fd444)
 
 
 **Output:**
-![Screenshot (571)](https://github.com/user-attachments/assets/dec33c28-72bb-495e-b0bc-5cbd79309b9a)
+
+
+![image](https://github.com/user-attachments/assets/4d8af776-dc21-449e-973c-784986f66025)
+
 
 
 **Question 6**
 
-Create a new table named orders with the following specifications:
-ord_id as TEXT with a length of 4.
-item_id as TEXT.
-ord_date as DATE.
-ord_qty as INTEGER.
-cost as INTEGER.
-The primary key is a composite key consisting of item_id and ord_date.
-ord_id and item_id should not accept NULL
-
-![Screenshot (572)](https://github.com/user-attachments/assets/3ec36549-1328-4fc0-8839-dd8982b7a22a)
-
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
+![image](https://github.com/user-attachments/assets/3e99b990-7501-4977-8282-6a9f69c19051)
 
 
 **Output:**
 
-![Screenshot (573)](https://github.com/user-attachments/assets/a0bb056e-b40c-4b78-a16c-6eb7e5bc94b5)
+![image](https://github.com/user-attachments/assets/e715d834-1a58-4e70-b852-b4da107096ec)
 
 
 
 **Question 7**
+Write a SQL query to remove rows from the table 'customer' with the following condition -
 
-Create a table named Invoices with the following constraints:
-InvoiceID as INTEGER should be the primary key.
-InvoiceDate as DATE.
-Amount as REAL should be greater than 0.
-DueDate as DATE should be greater than the InvoiceDate.
-OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
+1. 'cust_country' must be 'India',
 
-![Screenshot (574)](https://github.com/user-attachments/assets/7f58f2d1-d4fe-4164-93fe-5ca6b2de2358)
+2. 'cus_city' must not be 'Chennai',
+
+3. ![image](https://github.com/user-attachments/assets/a0e6e47c-ac17-4610-86cb-dd488fe79f23)
 
 
 
 **Output:**
-![Screenshot (575)](https://github.com/user-attachments/assets/309589de-fe9f-4882-843e-1207f5081152)
+
+
+![image](https://github.com/user-attachments/assets/552e94d1-c23b-4358-b6b8-0a8d2cfc7c61)
 
 
 **Question 8**
 
-Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
+Write a SQL query to Delete customers with following conditions
 
-![Screenshot (576)](https://github.com/user-attachments/assets/c6ab31fd-298c-4ed4-93cc-2ce2d1913610)
-
+'CUST_COUNTRY' is not in a list of specified countries ('UK', 'USA', 'Canada')
+'GRADE' is greater than or equal to 3
+![image](https://github.com/user-attachments/assets/d1be6c14-4655-4e1d-9760-7c8daba46bcb)
 
 
 **Output:**
-
-![Screenshot (577)](https://github.com/user-attachments/assets/967fdc40-8d10-4b12-b6ab-228916158b27)
+![image](https://github.com/user-attachments/assets/33ae747a-ecb4-4d13-93b4-3bbcff855d33)
 
 
 **Question 9**
 
-In the Student_details table, insert a student record where some fields are NULL, another record where all fields are filled without any NULL values, and a third record where some fields are filled, and others are left as NULL.
+Write a SQL query to Delete All Doctors with a NULL Specialization
 
-
-![Screenshot (579)](https://github.com/user-attachments/assets/6db2f61d-f8c8-4f4f-8d8a-e7f9e1a744dd)
+![image](https://github.com/user-attachments/assets/13fa52bc-8132-4c05-8abe-ca787c569e42)
 
 **Output:**
 
-![Screenshot (580)](https://github.com/user-attachments/assets/496b6bd4-46e0-477b-ab7e-06f11577810b)
+![image](https://github.com/user-attachments/assets/6384630f-a460-48ef-91f0-08e3b66b6182)
+
+
 
 
 **Question 10**
 
-Create a table named Departments with the following columns:
+Write a SQL query to Delete All Doctors with a NULL Last Name
 
-DepartmentID as INTEGER
-DepartmentName as TEXT
-
-![Screenshot (581)](https://github.com/user-attachments/assets/8cfd6864-b90e-41e2-8b27-2d63bf594473)
+![image](https://github.com/user-attachments/assets/ec083648-e88f-478c-88f8-60bc144d4136)
 
 
 **Output:**
 
-![Screenshot (582)](https://github.com/user-attachments/assets/e8345f0a-abbb-404e-9bdb-ef57ac038327)
+![image](https://github.com/user-attachments/assets/e7794c5e-b6f5-495b-80a0-a7e91016a377)
 
 
 ## RESULT
-Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
+Thus, the SQL queries to implement DML commands have been executed successfully.

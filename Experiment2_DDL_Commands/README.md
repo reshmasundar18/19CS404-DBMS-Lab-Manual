@@ -51,12 +51,14 @@ Write a SQL statement to Change the category to 'Household' where product name c
 
 Products Table 
 
-![image](https://github.com/user-attachments/assets/53caab71-b36e-41d5-aeb0-15956fc73068)
+![Screenshot 2025-04-30 192701](https://github.com/user-attachments/assets/ed5c78a7-dfe7-403a-9272-90711d0b0d27)
+
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/23417043-0704-4fe3-aced-1c24f6e65184)
+![Screenshot 2025-04-30 192711](https://github.com/user-attachments/assets/74787948-4d03-4f9b-ace6-4e74329324af)
+
 
 
 **Question 2**
@@ -64,10 +66,12 @@ Products Table
 Decrease the reorder level by 30 percent where the product name contains 'cream' and quantity in stock is higher than reorder level in the products table.
 
 PRODUCTS TABLE
+![Screenshot 2025-04-30 192722](https://github.com/user-attachments/assets/a0dafb09-0bc8-4aa1-bfa0-35aa56f76ae3)
 
 
 **Output:**
 
+![Screenshot 2025-04-30 192732](https://github.com/user-attachments/assets/e37c7017-ee8d-48f0-944c-443cf4f11204)
 
 
 **Question 3**
@@ -76,13 +80,12 @@ Write a SQL statement to Increase the selling price by 10% for all products in t
 
 Products table
 
+![Screenshot 2025-04-30 192741](https://github.com/user-attachments/assets/8ef19ff3-993d-44ee-9ba9-cb856085ea25)
 
 
 **Output:**
 
-
-
-
+![Screenshot 2025-04-30 192749](https://github.com/user-attachments/assets/3d1d1b6c-0347-42ea-9f53-f5d6b21d2f7d)
 
 
 **Question 4**
@@ -105,12 +108,14 @@ manager_id
 department_id
 
 
+![Screenshot 2025-04-30 192759](https://github.com/user-attachments/assets/fd0b37b1-27c8-4e25-87a9-fc8b50d69984)
 
 
 
 
 **Output:**
 
+![Screenshot 2025-04-30 192807](https://github.com/user-attachments/assets/340dad5d-f2bc-48bf-bf66-77be30e28536)
 
 
 
@@ -134,11 +139,13 @@ commission_pct
 manager_id
 department_id
 
+![Screenshot 2025-04-30 192815](https://github.com/user-attachments/assets/cf922c4c-21bd-4bc6-9568-24e53618d8e7)
 
 
 
 **Output:**
 
+![Screenshot 2025-04-30 192825](https://github.com/user-attachments/assets/1294e03e-45e8-4925-afe3-dfc7ae727a60)
 
 
 
@@ -148,11 +155,13 @@ department_id
 
 Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
 
+![Screenshot 2025-04-30 192836](https://github.com/user-attachments/assets/d407c442-52c4-4003-a626-07777a429ba3)
 
 
 **Output:**
 
 
+![Screenshot 2025-04-30 192845](https://github.com/user-attachments/assets/de4752a4-092c-4e43-832f-cec187a02bf6)
 
 
 
@@ -164,12 +173,14 @@ Write a SQL query to remove rows from the table 'customer' with the following co
 2. 'cus_city' must not be 'Chennai',
 
 
+![Screenshot 2025-04-30 192858](https://github.com/user-attachments/assets/893d7fcf-4262-4829-b02f-899b319d3b9f)
 
 
 
 **Output:**
 
 
+![Screenshot 2025-04-30 192909](https://github.com/user-attachments/assets/a71a0fac-efed-4ae7-a7b6-d6e698ef9c97)
 
 
 
@@ -180,21 +191,25 @@ Write a SQL query to Delete customers with following conditions
 'CUST_COUNTRY' is not in a list of specified countries ('UK', 'USA', 'Canada')
 'GRADE' is greater than or equal to 3
 
+![Screenshot 2025-04-30 192919](https://github.com/user-attachments/assets/4576cb84-cceb-4d22-aa93-eb4d68577a2d)
 
 
 **Output:**
 
+![Screenshot 2025-04-30 192942](https://github.com/user-attachments/assets/c162108f-35b4-4f23-9e98-1811e59e5348)
 
 
 **Question 9**
 
 Write a SQL query to Delete All Doctors with a NULL Specialization
 
+![Screenshot 2025-04-30 192951](https://github.com/user-attachments/assets/221432fe-18e0-45bf-b96f-717c0ac3aa9e)
 
 
 **Output:**
 
 
+![Screenshot 2025-04-30 192957](https://github.com/user-attachments/assets/9dd053ba-470c-469e-9028-46d40dde3d37)
 
 
 
@@ -203,11 +218,13 @@ Write a SQL query to Delete All Doctors with a NULL Specialization
 
 Write a SQL query to Delete All Doctors with a NULL Last Name
 
+![Screenshot 2025-04-30 193004](https://github.com/user-attachments/assets/a088d915-0f29-4974-9760-e5ffd7ba079f)
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/e7794c5e-b6f5-495b-80a0-a7e91016a377)
+![Screenshot 2025-04-30 193008](https://github.com/user-attachments/assets/038721b3-0fce-40d5-91fb-c64a5d9fbca8)
+
 
 
 ## RESULT

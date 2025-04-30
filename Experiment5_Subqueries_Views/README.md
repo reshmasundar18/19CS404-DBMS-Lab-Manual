@@ -44,6 +44,16 @@ Sample table: GRADES (attributes: student_id, student_name, subject, grade)
 
 ![Screenshot 2025-04-30 204226](https://github.com/user-attachments/assets/55794135-2217-4a45-9873-ea56842e017a)
 
+```
+SELECT *
+FROM Grades g
+WHERE grade = (
+    SELECT MAX(grade)
+    FROM Grades
+    WHERE subject = g.subject
+);
+
+```
 
 **Output:**
 
@@ -61,6 +71,20 @@ Table Name: orders
 
 ![Screenshot 2025-04-30 204239](https://github.com/user-attachments/assets/17c2aa8d-2884-4ae0-9011-6b958fb90182)
 
+```
+SELECT 
+   ord_no,
+   purch_amt,
+   ord_date, 
+   customer_id,
+   salesman_id
+FROM orders
+WHERE salesman_id = (
+SELECT salesman_id 
+FROM orders
+WHERE customer_id = 3007
+);
+```
 
 
 **Output:**
@@ -77,6 +101,16 @@ SAMPLE TABLE: customer
 
 ![Screenshot 2025-04-30 204249](https://github.com/user-attachments/assets/f7d819aa-da4e-4852-bf33-2b28c854d5d9)
 
+```
+SELECT *
+FROM customer
+WHERE city <> (
+    SELECT city
+    FROM customer
+    WHERE id = (SELECT MAX(id) FROM customer)
+);
+
+```
 
 **Output:**
 
@@ -92,6 +126,11 @@ Sample table: CUSTOMERS
 
 ![Screenshot 2025-04-30 204303](https://github.com/user-attachments/assets/eb33e3c1-5c00-4153-8f16-c59744df0ea0)
 
+```
+SELECT *
+FROM CUSTOMERS
+WHERE SALARY < 2500;
+```
 
 **Output:**
 
@@ -106,6 +145,11 @@ Sample table: CUSTOMERS
 
 ![Screenshot 2025-04-30 204311](https://github.com/user-attachments/assets/78546f5b-8ef4-4a7a-bde9-f28194f24ab1)
 
+```
+SELECT *
+FROM CUSTOMERS
+WHERE SALARY = 1500;
+```
 
 **Output:**
 
@@ -121,6 +165,16 @@ Sample table: GRADES (attributes: student_id, student_name, subject, grade)
 
 ![Screenshot 2025-04-30 204322](https://github.com/user-attachments/assets/a1e7437c-c8ad-4ab5-b661-341144dee9a2)
 
+```
+SELECT student_name, grade
+FROM GRADES g
+WHERE grade = (
+    SELECT MIN(grade)
+    FROM GRADES
+    WHERE subject = g.subject
+);
+
+```
 
 **Output:**
 
@@ -135,6 +189,11 @@ Sample table: CUSTOMERS
 
 ![Screenshot 2025-04-30 204334](https://github.com/user-attachments/assets/ded8c0f2-0d0c-42da-8d40-c0111fdd1216)
 
+```
+SELECT *
+FROM CUSTOMERS
+WHERE AGE < 30;
+```
 
 **Output:**
 
@@ -149,6 +208,15 @@ Employee Table
 
 ![Screenshot 2025-04-30 204344](https://github.com/user-attachments/assets/652fa0e0-f933-4066-a1e8-e4ba1f519143)
 
+```
+SELECT id, name, age, city, income
+FROM Employee
+WHERE age < (
+    SELECT AVG(age)
+    FROM Employee
+    WHERE income > 250000
+);
+```
 
 **Output:**
 
@@ -164,7 +232,16 @@ Sample table: GRADES (attributes: student_id, student_name, subject, grade)
 
 ![Screenshot 2025-04-30 204358](https://github.com/user-attachments/assets/278af2a3-02ac-4962-8fde-bf87f186e377)
 
+```
+SELECT student_id, student_name, subject, grade
+FROM GRADES g
+WHERE grade = (
+    SELECT MIN(grade)
+    FROM GRADES
+    WHERE subject = g.subject
+);
 
+```
 
 **Output:**
 
@@ -179,7 +256,15 @@ salesman table
 
 ![Screenshot 2025-04-30 204409](https://github.com/user-attachments/assets/d27ac41e-a6cd-4a68-849b-d50fea3eacb1)
 
-
+```
+SELECT commission
+FROM salesman 
+WHERE salesman_id IN (
+SELECT salesman_id 
+FROM customer 
+WHERE city = 'Paris'
+);
+```
 
 **Output:**
 

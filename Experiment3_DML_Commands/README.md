@@ -276,3 +276,6 @@ WHERE last_name IS NULL;
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
+
+![Screenshot 2025-04-30 221853](https://github.com/user-attachments/assets/b3a04ad6-8994-40fb-8043-1730cb5343a8)
+

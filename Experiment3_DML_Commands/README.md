@@ -45,157 +45,190 @@ Used to retrieve records from a table.
 ```sql
 SELECT column1, column2 FROM table_name WHERE condition;
 ```
-**Question 1**
-How many prescriptions were written in each frequency category (e.g., once daily, twice daily)?
 
-Sample tablePrescriptions Table
-![Screenshot 2025-04-30 200726](https://github.com/user-attachments/assets/0171e4c9-e8d0-4f27-af88-2fff3620c673)
 
 
-**Output:**
+*Question 1*
 
+Write a SQL statement to Change the category to 'Household' where product name contains 'Detergent' in the products table.
 
-![Screenshot 2025-04-30 200735](https://github.com/user-attachments/assets/f9500498-c96b-4a0c-bef6-a242b9069ae4)
+Products Table 
 
+![Screenshot 2025-04-30 192701](https://github.com/user-attachments/assets/ed5c78a7-dfe7-403a-9272-90711d0b0d27)
 
 
-**Question 2**
 
-What is the average dosage prescribed for each medication?
+*Output:*
 
-Sample tablePrescriptions Table
+![Screenshot 2025-04-30 192711](https://github.com/user-attachments/assets/74787948-4d03-4f9b-ace6-4e74329324af)
 
-![Screenshot 2025-04-30 200749](https://github.com/user-attachments/assets/fae733df-f2ce-49d5-88f0-1817aec5d41d)
 
 
-**Output:**
+*Question 2*
 
-![Screenshot 2025-04-30 200805](https://github.com/user-attachments/assets/77ade200-efe0-4f58-9dd0-33581645665e)
+Decrease the reorder level by 30 percent where the product name contains 'cream' and quantity in stock is higher than reorder level in the products table.
 
+PRODUCTS TABLE
+![Screenshot 2025-04-30 192722](https://github.com/user-attachments/assets/a0dafb09-0bc8-4aa1-bfa0-35aa56f76ae3)
 
 
+*Output:*
 
-**Question 3**
-How many appointments are scheduled for each doctor?
+![Screenshot 2025-04-30 192732](https://github.com/user-attachments/assets/e37c7017-ee8d-48f0-944c-443cf4f11204)
 
-Sample table:Appointments Table
 
-![Screenshot 2025-04-30 200811](https://github.com/user-attachments/assets/f0ca394d-db7c-454e-af48-fb311e283618)
+*Question 3*
 
+Write a SQL statement to Increase the selling price by 10% for all products in the 'Bakery' category in the products table.
 
-**Output:**
+Products table
 
-![Screenshot 2025-04-30 200816](https://github.com/user-attachments/assets/9f33e948-ef91-41c1-9613-26974789c172)
+![Screenshot 2025-04-30 192741](https://github.com/user-attachments/assets/8ef19ff3-993d-44ee-9ba9-cb856085ea25)
 
 
+*Output:*
 
-**Question 4**
+![Screenshot 2025-04-30 192749](https://github.com/user-attachments/assets/3d1d1b6c-0347-42ea-9f53-f5d6b21d2f7d)
 
-Write a SQL query to return the total number of rows in the 'customer' table where the city is Noida.
 
-Sample table: customer
+*Question 4*
 
-![Screenshot 2025-04-30 200821](https://github.com/user-attachments/assets/cb92b4fa-36ce-46d8-8170-00d2d9b6890d)
+Write a SQL statement to Double the salary for employees in department 20 who have a job_id ending with 'MAN'
 
+Employees table
 
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
 
-**Output:**
 
+![Screenshot 2025-04-30 192759](https://github.com/user-attachments/assets/fd0b37b1-27c8-4e25-87a9-fc8b50d69984)
 
-![Screenshot 2025-04-30 200825](https://github.com/user-attachments/assets/e7b48376-050e-4869-9152-5bab22e2541a)
 
 
 
-**Question 5**
+*Output:*
 
-Write a SQL query to find the number of employees who are having the same age removing the duplicate values.
+![Screenshot 2025-04-30 192807](https://github.com/user-attachments/assets/340dad5d-f2bc-48bf-bf66-77be30e28536)
 
-Sample table: employee
 
-![Screenshot 2025-04-30 200830](https://github.com/user-attachments/assets/3ef0377b-62ec-4d12-9ba6-73721f268568)
 
 
-**Output:**
+*Question 5*
 
-![Screenshot 2025-04-30 200835](https://github.com/user-attachments/assets/f3e72793-0052-4c10-b022-1e0695236762)
+Write a SQL statement to change the email column of employees table with 'Unavailable' for all employees in employees table.
 
+Employees table
 
+---------------
+employee_id
+first_name
+last_name
+email
+phone_number
+hire_date
+job_id
+salary
+commission_pct
+manager_id
+department_id
 
-**Question 6**
+![Screenshot 2025-04-30 192815](https://github.com/user-attachments/assets/cf922c4c-21bd-4bc6-9568-24e53618d8e7)
 
-Write a SQL query to calculate the average purchase amount of all orders. Return average purchase amount.
 
-Sample table: orders
 
-![Screenshot 2025-04-30 200843](https://github.com/user-attachments/assets/8955ba44-eb3c-4f9a-a7cd-461b407dac55)
+*Output:*
 
+![Screenshot 2025-04-30 192825](https://github.com/user-attachments/assets/1294e03e-45e8-4925-afe3-dfc7ae727a60)
 
 
-**Output:**
 
-![Screenshot 2025-04-30 200848](https://github.com/user-attachments/assets/8fb501c1-1ff0-4805-b038-929552c00872)
 
 
+*Question 6*
 
+Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
 
-**Question 7**
+![Screenshot 2025-04-30 192836](https://github.com/user-attachments/assets/d407c442-52c4-4003-a626-07777a429ba3)
 
-Write a SQL query to find the Fruit with the lowest available quantity.
 
-Note: Inventory attribute contains amount of fruits
+*Output:*
 
-![Screenshot 2025-04-30 200851](https://github.com/user-attachments/assets/1b22b87c-3858-4082-b88c-13031a36c7bd)
 
+![Screenshot 2025-04-30 192845](https://github.com/user-attachments/assets/de4752a4-092c-4e43-832f-cec187a02bf6)
 
-**Output:**
 
-![Screenshot 2025-04-30 200855](https://github.com/user-attachments/assets/d29dde6b-cd4a-48bb-a9cf-67a8ad33368f)
 
+*Question 7*
+Write a SQL query to remove rows from the table 'customer' with the following condition -
 
-**Question 8**
+1. 'cust_country' must be 'India',
 
-Write the SQL query that achieves the grouping of data by city, calculates the total income for each city, and includes only those cities where the total income sum is greater than 200,000.
+2. 'cus_city' must not be 'Chennai',
 
-Sample table: employee
 
-![Screenshot 2025-04-30 200901](https://github.com/user-attachments/assets/0d768ea4-3e77-4c03-8f4b-14c71c7967bd)
+![Screenshot 2025-04-30 192858](https://github.com/user-attachments/assets/893d7fcf-4262-4829-b02f-899b319d3b9f)
 
 
-**Output:**
 
-![Screenshot 2025-04-30 200905](https://github.com/user-attachments/assets/bdcf48ff-711c-4340-a462-a2d182d9a42d)
+*Output:*
 
 
+![Screenshot 2025-04-30 192909](https://github.com/user-attachments/assets/a71a0fac-efed-4ae7-a7b6-d6e698ef9c97)
 
-**Question 9**
 
-Write the SQL query to find how many patients have more than 3 medical records?.
 
-Sample table: MedicalRecords
+*Question 8*
 
-![Screenshot 2025-04-30 200910](https://github.com/user-attachments/assets/89d9060d-4a14-423e-8bc0-06fba5333925)
+Write a SQL query to Delete customers with following conditions
 
+'CUST_COUNTRY' is not in a list of specified countries ('UK', 'USA', 'Canada')
+'GRADE' is greater than or equal to 3
 
+![Screenshot 2025-04-30 192919](https://github.com/user-attachments/assets/4576cb84-cceb-4d22-aa93-eb4d68577a2d)
 
-**Output:**
 
-![Screenshot 2025-04-30 200914](https://github.com/user-attachments/assets/5c9daa93-74a9-4f58-b5a7-38d4dbcf9f87)
+*Output:*
 
+![Screenshot 2025-04-30 192942](https://github.com/user-attachments/assets/c162108f-35b4-4f23-9e98-1811e59e5348)
 
-**Question 10**
 
-Write the SQL query that achieves the grouping of data by occupation, calculates the average work hours for each occupation, and includes only those occupations where the average work hour falls between 10 and 12.
+*Question 9*
 
-Sample table: employee1
+Write a SQL query to Delete All Doctors with a NULL Specialization
 
-![Screenshot 2025-04-30 200919](https://github.com/user-attachments/assets/fcfcdf4f-dd32-42d1-9d5a-b8452ca5f852)
+![Screenshot 2025-04-30 192951](https://github.com/user-attachments/assets/221432fe-18e0-45bf-b96f-717c0ac3aa9e)
 
 
+*Output:*
 
-**Output:**
 
-![Screenshot 2025-04-30 200923](https://github.com/user-attachments/assets/97f887bf-cc2d-4e5e-9906-77a74318c04d)
+![Screenshot 2025-04-30 192957](https://github.com/user-attachments/assets/9dd053ba-470c-469e-9028-46d40dde3d37)
+
+
+
+
+*Question 10*
+
+Write a SQL query to Delete All Doctors with a NULL Last Name
+
+![Screenshot 2025-04-30 193004](https://github.com/user-attachments/assets/a088d915-0f29-4974-9760-e5ffd7ba079f)
+
+
+*Output:*
+
+![Screenshot 2025-04-30 193008](https://github.com/user-attachments/assets/038721b3-0fce-40d5-91fb-c64a5d9fbca8)
+
 
 
 ## RESULT
-Thus, the SQL queries to implement DML commands have been executed successfully.
+Thus, the SQL queries to implement DML commands have been executed successfully.

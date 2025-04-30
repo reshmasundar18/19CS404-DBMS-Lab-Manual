@@ -49,11 +49,13 @@ SELECT column1, column2 FROM table_name WHERE condition;
 How many prescriptions were written in each frequency category (e.g., once daily, twice daily)?
 
 Sample tablePrescriptions Table
-![Screenshot (583)](https://github.com/user-attachments/assets/fa98ff76-b7b5-4ffb-94b8-41bd279034b4)
+![Screenshot 2025-04-30 200726](https://github.com/user-attachments/assets/0171e4c9-e8d0-4f27-af88-2fff3620c673)
+
 
 **Output:**
 
-![Screenshot (584)](https://github.com/user-attachments/assets/077b9c7d-0239-4209-801f-3e8eaa77bf46)
+
+![Screenshot 2025-04-30 200735](https://github.com/user-attachments/assets/f9500498-c96b-4a0c-bef6-a242b9069ae4)
 
 
 
@@ -62,12 +64,14 @@ Sample tablePrescriptions Table
 What is the average dosage prescribed for each medication?
 
 Sample tablePrescriptions Table
-![image](https://github.com/user-attachments/assets/92904f42-f9fe-425d-9028-5e3161d79826)
+
+![Screenshot 2025-04-30 200749](https://github.com/user-attachments/assets/fae733df-f2ce-49d5-88f0-1817aec5d41d)
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/d1d838f3-c620-4010-a05d-155768af5925)
+![Screenshot 2025-04-30 200805](https://github.com/user-attachments/assets/77ade200-efe0-4f58-9dd0-33581645665e)
+
 
 
 
@@ -75,12 +79,13 @@ Sample tablePrescriptions Table
 How many appointments are scheduled for each doctor?
 
 Sample table:Appointments Table
-![image](https://github.com/user-attachments/assets/b3cf0128-8a54-4175-9eee-c4ef85d94b4f)
+
+![Screenshot 2025-04-30 200811](https://github.com/user-attachments/assets/f0ca394d-db7c-454e-af48-fb311e283618)
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/f2978cdf-8d0c-47b4-be1e-1cc699892568)
+![Screenshot 2025-04-30 200816](https://github.com/user-attachments/assets/9f33e948-ef91-41c1-9613-26974789c172)
 
 
 
@@ -90,12 +95,14 @@ Write a SQL query to return the total number of rows in the 'customer' table whe
 
 Sample table: customer
 
-![image](https://github.com/user-attachments/assets/1047d18f-4c10-4aa9-9de3-53bf0b0450a3)
+![Screenshot 2025-04-30 200821](https://github.com/user-attachments/assets/cb92b4fa-36ce-46d8-8170-00d2d9b6890d)
+
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/ec56d92e-c7fa-48b7-ba73-8ca99dafb332)
+
+![Screenshot 2025-04-30 200825](https://github.com/user-attachments/assets/e7b48376-050e-4869-9152-5bab22e2541a)
 
 
 
@@ -105,11 +112,13 @@ Write a SQL query to find the number of employees who are having the same age re
 
 Sample table: employee
 
-![image](https://github.com/user-attachments/assets/3e268ad8-496f-49f0-a4e4-0bd7936b29be)
+![Screenshot 2025-04-30 200830](https://github.com/user-attachments/assets/3ef0377b-62ec-4d12-9ba6-73721f268568)
+
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/0272d0ad-bcd1-4a89-912c-f3ecba9da486)
+![Screenshot 2025-04-30 200835](https://github.com/user-attachments/assets/f3e72793-0052-4c10-b022-1e0695236762)
+
 
 
 **Question 6**
@@ -118,12 +127,14 @@ Write a SQL query to calculate the average purchase amount of all orders. Return
 
 Sample table: orders
 
-![image](https://github.com/user-attachments/assets/5dff57ea-f7b7-4ffa-8078-f6ad521563b6)
+![Screenshot 2025-04-30 200843](https://github.com/user-attachments/assets/8955ba44-eb3c-4f9a-a7cd-461b407dac55)
+
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/a88cabc0-1183-41c0-9764-36aa5bc0fc55)
+![Screenshot 2025-04-30 200848](https://github.com/user-attachments/assets/8fb501c1-1ff0-4805-b038-929552c00872)
+
 
 
 
@@ -133,12 +144,12 @@ Write a SQL query to find the Fruit with the lowest available quantity.
 
 Note: Inventory attribute contains amount of fruits
 
-![image](https://github.com/user-attachments/assets/c09db1c4-2563-4a80-8be5-abbdf63d5b87)
+![Screenshot 2025-04-30 200851](https://github.com/user-attachments/assets/1b22b87c-3858-4082-b88c-13031a36c7bd)
+
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/c8189ca9-ac3b-4f9f-aab9-e3615605abc6)
-
+![Screenshot 2025-04-30 200855](https://github.com/user-attachments/assets/d29dde6b-cd4a-48bb-a9cf-67a8ad33368f)
 
 
 **Question 8**
@@ -147,13 +158,12 @@ Write the SQL query that achieves the grouping of data by city, calculates the t
 
 Sample table: employee
 
-![image](https://github.com/user-attachments/assets/600d0719-d0cc-484f-a593-e479763b8e0a)
+![Screenshot 2025-04-30 200901](https://github.com/user-attachments/assets/0d768ea4-3e77-4c03-8f4b-14c71c7967bd)
+
 
 **Output:**
 
-
-![image](https://github.com/user-attachments/assets/88d6ab7d-b7f1-4af6-a5cb-a90416047b77)
-
+![Screenshot 2025-04-30 200905](https://github.com/user-attachments/assets/bdcf48ff-711c-4340-a462-a2d182d9a42d)
 
 
 
@@ -163,13 +173,13 @@ Write the SQL query to find how many patients have more than 3 medical records?.
 
 Sample table: MedicalRecords
 
-![image](https://github.com/user-attachments/assets/3252540e-f724-4c06-885e-6d00b2ba25f0)
+![Screenshot 2025-04-30 200910](https://github.com/user-attachments/assets/89d9060d-4a14-423e-8bc0-06fba5333925)
+
 
 
 **Output:**
 
-
-![image](https://github.com/user-attachments/assets/c05dafa6-51db-4f2e-9e5c-52e9c4d7f7fa)
+![Screenshot 2025-04-30 200914](https://github.com/user-attachments/assets/5c9daa93-74a9-4f58-b5a7-38d4dbcf9f87)
 
 
 **Question 10**
@@ -178,14 +188,13 @@ Write the SQL query that achieves the grouping of data by occupation, calculates
 
 Sample table: employee1
 
-![image](https://github.com/user-attachments/assets/809196ac-7d23-4b32-9ddd-996fc3277c36)
+![Screenshot 2025-04-30 200919](https://github.com/user-attachments/assets/fcfcdf4f-dd32-42d1-9d5a-b8452ca5f852)
+
 
 
 **Output:**
 
-![image](https://github.com/user-attachments/assets/b9c1dd24-9f12-4125-abed-3fe02c1f1a25)
-
-
+![Screenshot 2025-04-30 200923](https://github.com/user-attachments/assets/97f887bf-cc2d-4e5e-9906-77a74318c04d)
 
 
 ## RESULT

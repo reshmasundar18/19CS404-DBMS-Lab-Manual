@@ -321,5 +321,6 @@ VALUES(205,'Olivia Green','F',NULL,NULL),
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
 
-![Screenshot 2025-04-30 221853](https://github.com/user-attachments/assets/76dd72cc-573b-4998-8969-c54dd0ffee94)
+![Screenshot 2025-04-30 222350](https://github.com/user-attachments/assets/3e58a8a3-cd73-4646-8080-fe94588248bd)
+
 

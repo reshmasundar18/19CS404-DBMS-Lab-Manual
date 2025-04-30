@@ -42,6 +42,12 @@ How many prescriptions were written in each frequency category (e.g., once daily
 Sample tablePrescriptions Table
 ![Screenshot 2025-04-30 200726](https://github.com/user-attachments/assets/0171e4c9-e8d0-4f27-af88-2fff3620c673)
 
+```
+SELECT Frequency, COUNT(*) AS TotalPrescriptions
+FROM Prescriptions
+GROUP BY Frequency;
+```
+
 
 *Output:*
 
@@ -58,6 +64,11 @@ Sample tablePrescriptions Table
 
 ![Screenshot 2025-04-30 200749](https://github.com/user-attachments/assets/fae733df-f2ce-49d5-88f0-1817aec5d41d)
 
+```
+SELECT Medication , Avg(Dosage) AS "AvgDosage"
+FROM  Prescriptions
+GROUP BY Medication;
+```
 
 *Output:*
 
@@ -73,6 +84,11 @@ Sample table:Appointments Table
 
 ![Screenshot 2025-04-30 200811](https://github.com/user-attachments/assets/f0ca394d-db7c-454e-af48-fb311e283618)
 
+```
+SELECT DoctorID, COUNT(*) AS TotalAppointments
+FROM Appointments
+GROUP BY DoctorID;
+```
 
 *Output:*
 
@@ -88,7 +104,11 @@ Sample table: customer
 
 ![Screenshot 2025-04-30 200821](https://github.com/user-attachments/assets/cb92b4fa-36ce-46d8-8170-00d2d9b6890d)
 
-
+```
+SELECT COUNT(*) AS COUNT
+FROM customer
+WHERE city='Noida';
+```
 
 *Output:*
 
@@ -105,6 +125,10 @@ Sample table: employee
 
 ![Screenshot 2025-04-30 200830](https://github.com/user-attachments/assets/3ef0377b-62ec-4d12-9ba6-73721f268568)
 
+```
+SELECT COUNT(DISTINCT age) AS COUNT
+FROM employee;
+```
 
 *Output:*
 
@@ -120,7 +144,10 @@ Sample table: orders
 
 ![Screenshot 2025-04-30 200843](https://github.com/user-attachments/assets/8955ba44-eb3c-4f9a-a7cd-461b407dac55)
 
-
+```
+SELECT AVG(purch_amt) AS AVERAGE
+FROM orders;
+```
 
 *Output:*
 
@@ -137,6 +164,13 @@ Note: Inventory attribute contains amount of fruits
 
 ![Screenshot 2025-04-30 200851](https://github.com/user-attachments/assets/1b22b87c-3858-4082-b88c-13031a36c7bd)
 
+```
+SELECT name AS fruit_name ,inventory AS lowest_quantity
+FROM fruits
+ORDER BY inventory ASC
+LIMIT 1;
+```
+
 
 *Output:*
 
@@ -151,6 +185,12 @@ Sample table: employee
 
 ![Screenshot 2025-04-30 200901](https://github.com/user-attachments/assets/0d768ea4-3e77-4c03-8f4b-14c71c7967bd)
 
+```
+SELECT city, SUM(income) AS Income
+FROM employee
+Group by city
+HAVING income >200000;
+```
 
 *Output:*
 
@@ -166,6 +206,12 @@ Sample table: MedicalRecords
 
 ![Screenshot 2025-04-30 200910](https://github.com/user-attachments/assets/89d9060d-4a14-423e-8bc0-06fba5333925)
 
+```
+SELECT PatientID, Count(*) AS TotalRecords
+FROM MedicalRecords
+GROUP BY PatientID
+Having COUNT(*)>3;
+```
 
 
 *Output:*
@@ -181,7 +227,12 @@ Sample table: employee1
 
 ![Screenshot 2025-04-30 200919](https://github.com/user-attachments/assets/fcfcdf4f-dd32-42d1-9d5a-b8452ca5f852)
 
-
+```
+SELECT occupation , AVG(workhour)AS"AVG(workhour)"
+FROM employee1
+GROUP BY occupation
+having avg(workhour) BETWEEN 10 AND 12;
+```
 
 *Output:*
 
@@ -190,3 +241,5 @@ Sample table: employee1
 
 ## RESULT
 Thus, the SQL queries to implement DML commands have been executed successfully.
+![Screenshot 2025-04-30 221800](https://github.com/user-attachments/assets/e62cc684-d592-407d-a000-549ed3c69580)
+

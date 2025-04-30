@@ -56,7 +56,11 @@ Products Table
 
 ![Screenshot 2025-04-30 192701](https://github.com/user-attachments/assets/ed5c78a7-dfe7-403a-9272-90711d0b0d27)
 
-
+```
+UPDATE Products
+SET category= 'Household'
+WHERE product_name LIKE '%Detergent%';
+```
 
 *Output:*
 
@@ -71,6 +75,12 @@ Decrease the reorder level by 30 percent where the product name contains 'cream'
 PRODUCTS TABLE
 ![Screenshot 2025-04-30 192722](https://github.com/user-attachments/assets/a0dafb09-0bc8-4aa1-bfa0-35aa56f76ae3)
 
+```
+UPDATE PRODUCTS
+SET reorder_lvl =reorder_lvl *0.7
+WHERE product_name  LIKE '%cream%'
+AND quantity  > reorder_lvl;
+```
 
 *Output:*
 
@@ -85,6 +95,11 @@ Products table
 
 ![Screenshot 2025-04-30 192741](https://github.com/user-attachments/assets/8ef19ff3-993d-44ee-9ba9-cb856085ea25)
 
+```
+UPDATE Products
+SET sell_price=sell_price*1.10
+WHERE category LIKE '%Bakery%';
+```
 
 *Output:*
 
@@ -113,7 +128,12 @@ department_id
 
 ![Screenshot 2025-04-30 192759](https://github.com/user-attachments/assets/fd0b37b1-27c8-4e25-87a9-fc8b50d69984)
 
-
+```
+UPDATE Employees
+SET salary=2*salary
+WHERE department_id=20
+AND job_id LIKE '%MAN%';
+```
 
 
 *Output:*
@@ -144,13 +164,14 @@ department_id
 
 ![Screenshot 2025-04-30 192815](https://github.com/user-attachments/assets/cf922c4c-21bd-4bc6-9568-24e53618d8e7)
 
-
+```
+UPDATE Employees 
+SET email='Unavailable';
+```
 
 *Output:*
 
 ![Screenshot 2025-04-30 192825](https://github.com/user-attachments/assets/1294e03e-45e8-4925-afe3-dfc7ae727a60)
-
-
 
 
 
@@ -159,6 +180,11 @@ department_id
 Write a SQL query to Delete customers from 'customer' table where 'GRADE' is greater than or equal to 2.
 
 ![Screenshot 2025-04-30 192836](https://github.com/user-attachments/assets/d407c442-52c4-4003-a626-07777a429ba3)
+
+```
+DELETE FROM Customer
+WHERE Grade>=2;
+```
 
 
 *Output:*
@@ -178,6 +204,11 @@ Write a SQL query to remove rows from the table 'customer' with the following co
 
 ![Screenshot 2025-04-30 192858](https://github.com/user-attachments/assets/893d7fcf-4262-4829-b02f-899b319d3b9f)
 
+```
+DELETE FROM Customer
+WHERE CUST_COUNTRY = 'India'
+AND CUST_CITY <>'Chennai';
+```
 
 
 *Output:*
@@ -196,6 +227,11 @@ Write a SQL query to Delete customers with following conditions
 
 ![Screenshot 2025-04-30 192919](https://github.com/user-attachments/assets/4576cb84-cceb-4d22-aa93-eb4d68577a2d)
 
+```
+DELETE FROM Customer
+WHERE CUST_COUNTRY NOT IN ('UK', 'USA', 'Canada')
+AND GRADE >=3;
+```
 
 *Output:*
 
@@ -208,6 +244,10 @@ Write a SQL query to Delete All Doctors with a NULL Specialization
 
 ![Screenshot 2025-04-30 192951](https://github.com/user-attachments/assets/221432fe-18e0-45bf-b96f-717c0ac3aa9e)
 
+```
+DELETE FROM Doctors
+WHERE specialization IS NULL;
+```
 
 *Output:*
 
@@ -223,6 +263,10 @@ Write a SQL query to Delete All Doctors with a NULL Last Name
 
 ![Screenshot 2025-04-30 193004](https://github.com/user-attachments/assets/a088d915-0f29-4974-9760-e5ffd7ba079f)
 
+```
+DELETE FROM Doctors
+WHERE last_name IS NULL;
+```
 
 *Output:*
 

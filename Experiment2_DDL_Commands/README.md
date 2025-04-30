@@ -282,6 +282,7 @@ AssignmentDate as DATE should be NOT NULL.
 
 ![Screenshot 2025-04-30 211745](https://github.com/user-attachments/assets/e56009b1-97ab-44fd-ab63-98fee17c9be5)
 
+```
 CREATE TABLE ProjectAssignments(
 AssignmentID INTEGER PRIMARY KEY,
 EmployeeID INTEGER,

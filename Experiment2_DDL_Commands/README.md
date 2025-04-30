@@ -109,6 +109,10 @@ Write an SQL query to add a new column email of type TEXT to the Student_details
 
 ![Screenshot 2025-04-30 211440](https://github.com/user-attachments/assets/30738c98-0273-4bb4-adef-0448ccdc4847)
 
+```
+ALTER TABLE Student_details
+ADD COLUMN email TEXT NOT NULL DEFAULT 'Invalid';
+```
 
 **Output:**
 
@@ -122,6 +126,11 @@ Write a SQL query to add birth_date attribute as timestamp (datatype) in the tab
 Sample table: customer
 
 ![Screenshot 2025-04-30 211502](https://github.com/user-attachments/assets/e43a6bad-3ab1-4e11-9a71-bd8d9b6f24ee)
+
+```
+ALTER TABLE customer
+ADD COLUMN birth_date timestamp;
+```
 
 
 **Output:**
@@ -140,7 +149,13 @@ Amount as REAL should be greater than 0.
 
 ![Screenshot 2025-04-30 211518](https://github.com/user-attachments/assets/b70fa099-a880-43df-b1a1-55405c6e805e)
 
-
+```
+CREATE TABLE Invoices(
+InvoiceID INTEGER PRIMARY KEY,
+InvoiceDate DATE,
+DueDate DATE CHECK(DueDate>InvoiceDate),
+Amount REAL CHECK(Amount>0));
+```
 
 **Output:**
 
@@ -153,7 +168,11 @@ Insert all students from Archived_students table into the Student_details table.
 
 ![Screenshot 2025-04-30 211541](https://github.com/user-attachments/assets/f03d99d8-feb9-4946-bb67-c67c50fa2446)
 
-
+```
+INSERT INTO Student_details(RollNo,Name,Gender, Subject,MARKS)
+SELECT RollNo,Name, Gender, Subject,MARKS 
+FROM Archived_students
+```
 
 **Output:**
 
@@ -171,7 +190,12 @@ JoinDate as DATETIME
 
 ![Screenshot 2025-04-30 211602](https://github.com/user-attachments/assets/5a7129ed-9230-4d51-8431-d4c17e6b62b4)
 
-
+```
+CREATE TABLE Customers(CustomerID INTEGER,
+Name TEXT,
+Email TEXT,
+JoinDate DATETIME);
+```
 
 **Output:**
 
@@ -191,6 +215,16 @@ ord_id and item_id should not accept NULL
 
 ![Screenshot 2025-04-30 211617](https://github.com/user-attachments/assets/9724fc6d-f253-4872-a570-fac96c6def38)
 
+```
+CREATE TABLE orders(ord_id  TEXT CHECK(LENGTH(ord_id)=4) NOT NULL,
+item_id TEXT NOT NULL,
+ord_date DATE,
+ord_qty INTEGER ,
+cost INTEGER,
+PRIMARY KEY(item_id,ord_date)
+);
+```
+
 
 **Output:**
 
@@ -208,6 +242,10 @@ OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
 
 ![Screenshot 2025-04-30 211632](https://github.com/user-attachments/assets/9fdfecb3-fb67-4f4c-817a-75fd1f682633)
 
+```
+CREATE TABLE Invoices(InvoiceID INTEGER,InvoiceDate DATE,Amount REAL,DueDate DATE CHECK(DueDate>InvoiceDate),OrderID INTEGER ,
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID));
+```
 
 **Output:**
 
@@ -219,6 +257,13 @@ OrderID as INTEGER should be a foreign key referencing Orders(OrderID).
 Insert the below data into the Customers table, allowing the City and ZipCode columns to take their default values.
 
 ![Screenshot 2025-04-30 211645](https://github.com/user-attachments/assets/555c519d-515f-46df-b7d1-5df087f8b57c)
+
+```
+INSERT INTO Customers(CustomerID, Name, Address)
+VALUES
+(304,'Peter Parker','Spider St');
+```
+
 
 
 
@@ -237,6 +282,16 @@ AssignmentDate as DATE should be NOT NULL.
 
 ![Screenshot 2025-04-30 211745](https://github.com/user-attachments/assets/e56009b1-97ab-44fd-ab63-98fee17c9be5)
 
+CREATE TABLE ProjectAssignments(
+AssignmentID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+ProjectID INTEGER,
+AssignmentDate DATE NOT NULL,
+FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID),
+FOREIGN KEY (ProjectID) REFERENCES Projects(ProjectID) 
+);
+```
+
 
 **Output:**
 
@@ -249,6 +304,12 @@ In the Student_details table, insert a student record where some fields are NULL
 
 ![Screenshot 2025-04-30 211709](https://github.com/user-attachments/assets/2a6de218-94c1-44a8-af8a-4ed4c39e786e)
 
+```
+INSERT INTO Student_details (RollNo      ,Name         ,Gender      ,Subject    , MARKS)
+VALUES(205,'Olivia Green','F',NULL,NULL),
+(207,'Liam Smith','M','Mathematic','85'),
+(208,'Sophia Johns','F','Science',NULL);
+```
 
 **Output:**
 
@@ -258,3 +319,6 @@ In the Student_details table, insert a student record where some fields are NULL
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
+
+![Screenshot 2025-04-30 221853](https://github.com/user-attachments/assets/76dd72cc-573b-4998-8969-c54dd0ffee94)
+

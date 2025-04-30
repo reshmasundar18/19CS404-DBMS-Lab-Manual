@@ -1,4 +1,4 @@
-# Experiment 3: DML Commands
+# Experiment 2: DDL Commands
 
 ## AIM
 To study and implement DML (Data Manipulation Language) commands.

@@ -310,3 +310,6 @@ WHERE d.first_name = 'Emily'
 
 ## RESULT
 Thus, the SQL queries to implement different types of joins have been executed successfully.
+
+![image](https://github.com/user-attachments/assets/63b88840-8a36-49d4-8991-bcf3d71e27b8)
+

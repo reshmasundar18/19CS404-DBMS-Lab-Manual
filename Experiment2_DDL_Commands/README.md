@@ -105,123 +105,163 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+![Screenshot 2025-05-25 165215](https://github.com/user-attachments/assets/bf7b8b29-e510-4b32-b289-80996a63ee4f)
 
-```sql
--- Paste your SQL code below for Question 1
+```
+CREATE TABLE  Bonuses (
+BonusID INTEGER PRIMARY KEY,
+EmployeeID INTEGER,
+BonusAmount REAL CHECK(BonusAmount > 0),
+BonusDate DATE,
+Reason TEXT NOT NULL,
+FOREIGN KEY (EmployeeID) REFERENCES Employees(EmployeeID)
+);
 ```
 
 **Output:**
+![Screenshot 2025-05-25 165358](https://github.com/user-attachments/assets/e5ff19bf-7580-4e04-b576-780c11f98919)
 
-![Output1](output.png)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![Screenshot 2025-05-25 165515](https://github.com/user-attachments/assets/191702d6-5638-4bfb-9041-a804d8f41599)
 
-```sql
--- Paste your SQL code below for Question 2
+```
+ALTER TABLE customers
+ADD COLUMN email TEXT;
 ```
 
 **Output:**
+![Screenshot 2025-05-25 165622](https://github.com/user-attachments/assets/2f916e6f-16b0-491e-96be-1b74086c9f06)
 
-![Output2](output.png)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![Screenshot 2025-05-25 165655](https://github.com/user-attachments/assets/7df3d0ec-9b64-4926-ab90-99e6e6720608)
 
-```sql
--- Paste your SQL code below for Question 3
+```
+INSERT INTO Student_details (RollNo, Name, Gender, Subject, MARKS)
+SELECT RollNo, Name, Gender, Subject, MARKS
+FROM Archived_students
 ```
 
 **Output:**
+![Screenshot 2025-05-25 165753](https://github.com/user-attachments/assets/6827097f-a132-44cf-9bbb-09098a91b322)
 
-![Output3](output.png)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![Screenshot 2025-05-25 165834](https://github.com/user-attachments/assets/b9ca3170-409a-40c3-9537-adc925640d17)
 
-```sql
--- Paste your SQL code below for Question 4
+```
+ALTER TABLE Student_details 
+ADD COLUMN mobilenumber number;
 ```
 
 **Output:**
+![Screenshot 2025-05-25 170044](https://github.com/user-attachments/assets/d4f7ae2d-ab09-452e-bff8-75aa24747feb)
 
-![Output4](output.png)
 
 **Question 5**
 ---
--- Paste Question 5 here
+![Screenshot 2025-05-25 170138](https://github.com/user-attachments/assets/487cb97c-5b18-4c0b-8c36-c56872e57da6)
 
-```sql
--- Paste your SQL code below for Question 5
+```
+CREATE TABLE Shipments (
+ShipmentID INTEGER PRIMARY KEY,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+FOREIGN KEY (SupplierID) REFERENCES Suppliers(SupplierID),
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID)
+);
 ```
 
 **Output:**
+![Screenshot 2025-05-25 170239](https://github.com/user-attachments/assets/3f4bc2b6-37a8-46bb-9149-30b95c782190)
 
-![Output5](output.png)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![Screenshot 2025-05-25 170336](https://github.com/user-attachments/assets/63d2170d-b3df-47b3-8e19-80936c8fde06)
 
-```sql
--- Paste your SQL code below for Question 6
+```
+CREATE TABLE Tasks (
+TaskID INTEGER,
+TaskName TEXT,
+DueDate DATE
+);
 ```
 
 **Output:**
+![Screenshot 2025-05-25 170512](https://github.com/user-attachments/assets/f8b34074-d6a9-4360-bfc8-a89ad085af33)
 
-![Output6](output.png)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Screenshot 2025-05-25 170602](https://github.com/user-attachments/assets/c8c70946-34e4-40f0-9493-2f0a3275a407)
 
-```sql
--- Paste your SQL code below for Question 7
+```
+CREATE TABLE Products (
+ProductID INTEGER PRIMARY KEY,
+ProductName TEXT NOT NULL,
+Price REAL CHECK(Price > 0),
+Stock INTEGER CHECK(Stock >= 0)
+);
 ```
 
 **Output:**
+![Screenshot 2025-05-25 170720](https://github.com/user-attachments/assets/9ec9a0bd-5c89-4a57-b15b-6fe965af51a5)
 
-![Output7](output.png)
 
 **Question 8**
 ---
--- Paste Question 8 here
+![Screenshot 2025-05-25 170808](https://github.com/user-attachments/assets/6f34e357-7633-422b-b6ca-43b6dfd94c7f)
 
-```sql
--- Paste your SQL code below for Question 8
+```
+INSERT INTO Student_details (RollNo, Name, Gender, Subject, MARKS)
+VALUES 
+(205, 'Olivia Green', 'F', NULL, NULL),
+(207, 'Liam Smith', 'M', 'Mathematic', 85),
+(208, 'Sophia Johns', 'F', 'Science', NULL);
 ```
 
 **Output:**
+![Screenshot 2025-05-25 170920](https://github.com/user-attachments/assets/d40f86c0-0050-4ad9-af42-334e28bb78d2)
 
-![Output8](output.png)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![Screenshot 2025-05-25 171000](https://github.com/user-attachments/assets/66fdb851-14a1-48d5-b27d-4f490dd4d6f2)
 
-```sql
--- Paste your SQL code below for Question 9
+```
+CREATE TABLE item (
+item_id TEXT PRIMARY KEY,
+item_desc TEXT NOT NULL,
+rate INTEGER NOT NULL,
+icom_id TEXT(4),
+FOREIGN KEY (icom_id) REFERENCES company(com_id) ON UPDATE SET NULL ON DELETE SET NULL
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+![Screenshot 2025-05-25 171122](https://github.com/user-attachments/assets/924d2f37-33a9-4fa1-b645-1e157df71f1d)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![Screenshot 2025-05-25 171150](https://github.com/user-attachments/assets/94382117-a4a1-48fa-bda5-7d25c5ffb4b9)
 
-```sql
--- Paste your SQL code below for Question 10
+```
+INSERT INTO Student_details (RollNo, Name, Gender, Subject, MARKS)
+VALUES
+(201, 'David Lee', 'M', 'Physics', 92)
 ```
 
 **Output:**
 
-![Output10](output.png)
+![Screenshot 2025-05-25 171303](https://github.com/user-attachments/assets/404370d9-127b-4fc3-838c-db1d02d74580)
 
 
 ## RESULT

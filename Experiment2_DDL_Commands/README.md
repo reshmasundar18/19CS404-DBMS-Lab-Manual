@@ -266,3 +266,5 @@ VALUES
 
 ## RESULT
 Thus, the SQL queries to implement different types of constraints and DDL commands have been executed successfully.
+![Screenshot 2025-05-25 190657](https://github.com/user-attachments/assets/6c09ac65-752a-435e-ab47-5e2e0abe239f)
+

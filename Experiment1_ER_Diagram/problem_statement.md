@@ -55,7 +55,6 @@ University / Hospital (choose one)
 
 
 ## Entities and Attributes:
-```
 Patient:
 
 Pat_id, PName, PDiagnosis, PAddress
@@ -83,7 +82,7 @@ D_id, D_name, Qualification, Salary
 ISA Relationship:
 
 Specialization into Permanent and Trainee (sub-entities). ...
-```
+
 ## Relationships and Constraints:
 ```
 - Relationship1 (Cardinality, Participation)

@@ -38,124 +38,140 @@ HAVING condition;
 
 **Question 1**
 --
--- Paste Question 1 here
+![Screenshot 2025-05-25 194246](https://github.com/user-attachments/assets/fa09e1ab-2fb5-4a30-8975-b43f8a42ad2e)
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT DoctorID, COUNT(*) AS TotalPrescriptions
+FROM Prescriptions
+GROUP BY DoctorID;
 ```
 
 **Output:**
-
-![Output1](output.png)
+![Screenshot 2025-05-25 194326](https://github.com/user-attachments/assets/8865c40f-d31b-422b-b636-87bed6b6afe4)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![Screenshot 2025-05-25 194352](https://github.com/user-attachments/assets/98aed71b-abd8-47fa-b11f-c4ae6345c974)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+SELECT InsuranceCompany, COUNT(DISTINCT PatientID) AS TotalPatients
+FROM Insurance
+GROUP BY InsuranceCompany;
 ```
 
 **Output:**
-
-![Output2](output.png)
+![Screenshot 2025-05-25 194450](https://github.com/user-attachments/assets/ee75b3cd-69c2-4972-966b-c437ff16f470)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![Screenshot 2025-05-25 194521](https://github.com/user-attachments/assets/aa7d758b-2414-4ab7-944e-4bd87919e16c)
 
 ```sql
--- Paste your SQL code below for Question 3
+SELECT Diagnosis, COUNT(*) AS DiagnosisCount
+FROM MedicalRecords
+GROUP BY Diagnosis
+ORDER BY DiagnosisCount DESC
+LIMIT 1;
 ```
 
 **Output:**
-
-![Output3](output.png)
+![Screenshot 2025-05-25 194619](https://github.com/user-attachments/assets/ae6d67c4-a931-4d00-b459-3b87519f8c89)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![Screenshot 2025-05-25 194647](https://github.com/user-attachments/assets/2a787f88-3796-468e-bce8-f6cd3231ff6d)
 
 ```sql
--- Paste your SQL code below for Question 4
+SELECT COUNT(DISTINCT city) AS unique_cities
+FROM customer;
 ```
 
 **Output:**
-
-![Output4](output.png)
+![Screenshot 2025-05-25 194749](https://github.com/user-attachments/assets/7eec116e-0e0a-49bc-8a22-b5fcf4ba2e64)
 
 **Question 5**
 ---
--- Paste Question 5 here
+![Screenshot 2025-05-25 195020](https://github.com/user-attachments/assets/99d299bc-9e3a-490c-b7c1-d50dfcd9b2d7)
 
 ```sql
--- Paste your SQL code below for Question 5
+SELECT AVG(LENGTH(email)) AS avg_email_length
+FROM customer;
 ```
 
 **Output:**
-
-![Output5](output.png)
+![Screenshot 2025-05-25 195106](https://github.com/user-attachments/assets/24a78042-7ef5-44e5-bdb0-7ff744ced819)
 
 **Question 6**
 ---
--- Paste Question 6 here
+![Screenshot 2025-05-25 195140](https://github.com/user-attachments/assets/219c3ee6-4b31-4726-8f3c-258b17c7c14b)
 
 ```sql
--- Paste your SQL code below for Question 6
+SELECT MIN(purch_amt) AS MINIMUM
+FROM orders;
 ```
 
 **Output:**
-
-![Output6](output.png)
+![Screenshot 2025-05-25 195254](https://github.com/user-attachments/assets/61ce07b4-34d0-4ed1-870d-cbf12f3cff61)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![Screenshot 2025-05-25 195335](https://github.com/user-attachments/assets/80fc97bb-b9ce-4574-9064-ad1269a02b95)
 
 ```sql
--- Paste your SQL code below for Question 7
+SELECT COUNT(*) AS employees_in_california
+FROM employee
+WHERE city = 'California';
 ```
 
 **Output:**
-
-![Output7](output.png)
+![Screenshot 2025-05-25 195428](https://github.com/user-attachments/assets/8db7f80f-5f77-4f1a-a391-79d959949dc6)
 
 **Question 8**
 ---
--- Paste Question 8 here
+![Screenshot 2025-05-25 195457](https://github.com/user-attachments/assets/a1610adb-3330-4aa2-92cc-ed7372df2d8c)
 
 ```sql
--- Paste your SQL code below for Question 8
+SELECT (age / 5) * 5 AS age_group, SUM(salary)
+FROM customer1
+GROUP BY age / 5
+HAVING Sum(salary) > 5000;
 ```
 
 **Output:**
+![Screenshot 2025-05-25 195745](https://github.com/user-attachments/assets/47961615-408d-4953-905d-2031f7df7e6e)
 
-![Output8](output.png)
 
 **Question 9**
 ---
--- Paste Question 9 here
+![Screenshot 2025-05-25 200144](https://github.com/user-attachments/assets/d734980b-a4ec-4386-8aaa-fd0d3d6a030f)
 
 ```sql
--- Paste your SQL code below for Question 9
+SELECT jdate, MIN(workhour) 
+FROM employee1
+GROUP BY jdate
+HAVING MIN(workhour) < 10;
 ```
 
 **Output:**
-
-![Output9](output.png)
+![Screenshot 2025-05-25 200355](https://github.com/user-attachments/assets/0640309e-9290-4692-89d2-5f3d2cfcab5a)
 
 **Question 10**
 ---
--- Paste Question 10 here
+![Screenshot 2025-05-25 200526](https://github.com/user-attachments/assets/b70a5314-1325-4ae9-9328-6cfd8ed58ef6)
 
 ```sql
--- Paste your SQL code below for Question 10
+SELECT category_id, MIN(price) AS Price
+FROM products
+GROUP BY category_id
+HAVING MIN(price) < 10;
 ```
 
 **Output:**
-
-![Output10](output.png)
-
+![Screenshot 2025-05-25 200619](https://github.com/user-attachments/assets/fd4a4796-870a-48bf-9e2c-99982ae688bf)
 
 ## RESULT
 Thus, the SQL queries to implement aggregate functions, GROUP BY, and HAVING clause have been executed successfully.
+![Screenshot 2025-05-25 200740](https://github.com/user-attachments/assets/55b91b2f-55ef-47cd-ac92-edde78d6247c)
+
+

@@ -121,9 +121,7 @@ Participation: Total for Doctor (every doctor belongs to a hospital)
 ISA (Inheritance between Doctor and Permanent/Trainee)
 
 A Doctor can be either Permanent or Trainee (exclusive specialization).
-
 ...
-
 
 ## Extension (Prerequisite / Billing):
 
@@ -141,7 +139,6 @@ Quantity and Price information of medicines.
 
 Billing logic assumes that medical records generate billing entries for the medicines used during treatment.
 
-
 ## Design Choices:
 
 Brief explanation of why you chose certain entities, relationships, and assumptions
@@ -155,7 +152,6 @@ Receptionist maintains patient data — included for administrative management w
 Medicine entity is modeled separately, acknowledging that medicines are not unique to a patient but rather are standardized items billed during medical treatment.
 
 Separate Medical Record entity — ensures patient history is preserved even if they switch hospitals or change doctors.
-
 
 ## RESULT
 The entities in the ER diagram are Patient, Hospital, Doctor (specialized into Permanent and Trainee), Receptionist, Medicine, and Medical Record, each with their relevant attributes. Patients are admitted into hospitals, have medical records, and are maintained by receptionists; medical records bill medicines, and hospitals have doctors. Billing is managed by connecting medical records to medicines, recording date, quantity, and price to accurately capture treatment costs. The design separates entities for clarity, uses specialization for doctors to reflect different employment types, and models billing independently to allow flexible management of patient treatments and expenses.

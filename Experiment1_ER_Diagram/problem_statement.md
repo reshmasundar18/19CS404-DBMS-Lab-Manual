@@ -51,22 +51,113 @@ Design a database for patient management, appointments, medical records, and bil
 University / Hospital (choose one)
 
 ## ER Diagram:
-![ER Diagram](er_diagram.png)
+![438267879-61922e0f-7513-4773-83c2-38753d629dae](https://github.com/user-attachments/assets/1250a730-10a6-432e-9d18-8e23cb36d47a)
+
 
 ## Entities and Attributes:
-- Entity1: Attributes
-- Entity2: Attributes
-...
+```
+Patient:
 
+Pat_id, PName, PDiagnosis, PAddress
+
+Hospital:
+
+H_id, H_name, Hcity, HAddress
+
+Medical record:
+
+PRecord, Date, Problem
+
+Receptionist:
+
+No direct attributes shown in the diagram
+
+Medicine:
+
+Date, Quantity, Price
+
+Doctor:
+
+D_id, D_name, Qualification, Salary
+
+ISA Relationship:
+
+Specialization into Permanent and Trainee (sub-entities). ...
+```
 ## Relationships and Constraints:
+```
 - Relationship1 (Cardinality, Participation)
+
 - Relationship2 (Cardinality, Participation)
+
+- Admitted in: (between Patient and Hospital)
+
+Cardinality: Many-to-One (many patients can be admitted to one hospital)
+
+Participation: Partial for Patient, total for Hospital (assumption)
+
+has: (between Patient and Medical record)
+
+Cardinality: One-to-Many (a patient can have multiple medical records)
+
+Participation: Total for Medical record (each record must belong to a patient)
+
+maintains: (between Receptionist and Patient)
+
+Cardinality: Many-to-Many (receptionists can maintain multiple patients, and patients can be handled by multiple receptionists)
+
+Participation: Partial for both
+
+bills: (between Medical record and Medicine)
+
+Cardinality: Many-to-Many (a medical record can bill multiple medicines; a medicine can appear in multiple records)
+
+Participation: Partial for both
+
+has: (between Hospital and Doctor)
+
+Cardinality: One-to-Many (one hospital has many doctors)
+
+Participation: Total for Doctor (every doctor belongs to a hospital)
+
+ISA (Inheritance between Doctor and Permanent/Trainee)
+
+A Doctor can be either Permanent or Trainee (exclusive specialization).
+
 ...
+```
 
 ## Extension (Prerequisite / Billing):
+```
 - Explain how you modeled prerequisites or billing.
 
+- Billing is modeled through the relationship bills between Medical record and Medicine.
+
+Each bill captures:
+
+The Medicine prescribed
+
+The Date of transaction
+
+Quantity and Price information of medicines.
+
+Billing logic assumes that medical records generate billing entries for the medicines used during treatment.
+```
+
 ## Design Choices:
+```
 Brief explanation of why you chose certain entities, relationships, and assumptions
 
+Separate entities for Patient, Hospital, Doctor, Medicine, and Receptionist to allow flexible scalability.
+
+Specialization (ISA) for Doctors into Permanent and Trainee because their employment types have different attributes and potential behaviors.
+
+Receptionist maintains patient data — included for administrative management without burdening the medical records directly.
+
+Medicine entity is modeled separately, acknowledging that medicines are not unique to a patient but rather are standardized items billed during medical treatment.
+
+Separate Medical Record entity — ensures patient history is preserved even if they switch hospitals or change doctors.
+```
+
 ## RESULT
+The entities in the ER diagram are Patient, Hospital, Doctor (specialized into Permanent and Trainee), Receptionist, Medicine, and Medical Record, each with their relevant attributes. Patients are admitted into hospitals, have medical records, and are maintained by receptionists; medical records bill medicines, and hospitals have doctors. Billing is managed by connecting medical records to medicines, recording date, quantity, and price to accurately capture treatment costs. The design separates entities for clarity, uses specialization for doctors to reflect different employment types, and models billing independently to allow flexible management of patient treatments and expenses.
